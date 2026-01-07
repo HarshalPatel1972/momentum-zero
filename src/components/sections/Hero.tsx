@@ -52,7 +52,7 @@ export function Hero() {
                   text="AI Agents"
                   variant="words"
                   delay={0.6}
-                  className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-primary bg-[length:200%_auto] animate-gradient inline-flex"
+                  className="text-primary inline-flex font-bold"
                 />
               </span>
             </h1>
