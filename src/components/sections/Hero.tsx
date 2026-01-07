@@ -186,7 +186,7 @@ export function Hero() {
 
               {/* Floating Element - Top Right */}
               <motion.div
-                animate={{ y: [0, -10, 0], x: [0, 5, 0] }}
+                animate={{ y: [0, -10, 0] }}
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1 }}
                 className="absolute -top-6 -right-6 p-4 bg-[rgba(26,26,46,0.9)] backdrop-blur-xl rounded-xl border border-white/10 shadow-xl"
               >
@@ -205,7 +205,7 @@ export function Hero() {
 
               {/* Floating Element - Bottom Left */}
               <motion.div
-                animate={{ y: [0, 10, 0], x: [0, -5, 0] }}
+                animate={{ y: [0, 10, 0] }}
                 transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
                 className="absolute -bottom-4 -left-8 p-3 bg-[rgba(26,26,46,0.9)] backdrop-blur-xl rounded-xl border border-white/10 shadow-xl"
               >

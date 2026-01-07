@@ -92,7 +92,6 @@ export function FloatingOrbs({ className, count = 5 }: FloatingOrbsProps) {
             top: `${orb.initialY}%`,
           }}
           animate={{
-            x: [0, 50, -30, 0],
             y: [0, -40, 30, 0],
             scale: [1, 1.1, 0.9, 1],
           }}
