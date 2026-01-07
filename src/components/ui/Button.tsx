@@ -4,12 +4,16 @@ import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
-interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+interface ButtonProps {
   variant?: "primary" | "secondary" | "ghost";
   size?: "sm" | "md" | "lg";
   children: React.ReactNode;
   href?: string;
   magnetic?: boolean;
+  className?: string;
+  onClick?: () => void;
+  disabled?: boolean;
+  type?: "button" | "submit" | "reset";
 }
 
 export function Button({
@@ -19,12 +23,14 @@ export function Button({
   className,
   href,
   magnetic = true,
-  ...props
+  onClick,
+  disabled,
+  type = "button",
 }: ButtonProps) {
   const buttonRef = useRef<HTMLButtonElement>(null);
   const [position, setPosition] = useState({ x: 0, y: 0 });
 
-  const handleMouseMove = (e: React.MouseEvent<HTMLButtonElement>) => {
+  const handleMouseMove = (e: React.MouseEvent) => {
     if (!magnetic || !buttonRef.current) return;
     
     const rect = buttonRef.current.getBoundingClientRect();
@@ -76,6 +82,9 @@ export function Button({
   const ButtonComponent = (
     <motion.button
       ref={buttonRef}
+      type={type}
+      disabled={disabled}
+      onClick={onClick}
       className={cn(
         "relative inline-flex items-center justify-center gap-2",
         "rounded-xl transition-all duration-300",
@@ -90,7 +99,6 @@ export function Button({
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       whileTap={{ scale: 0.98 }}
-      {...props}
     >
       <span className="relative z-10 flex items-center gap-2">{children}</span>
       

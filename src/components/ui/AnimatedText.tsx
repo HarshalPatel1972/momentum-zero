@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 interface AnimatedTextProps {
@@ -21,7 +21,7 @@ export function AnimatedText({
   staggerDelay = 0.05,
   tag: Tag = "p",
 }: AnimatedTextProps) {
-  const container = {
+  const container: Variants = {
     hidden: { opacity: 1 },
     visible: {
       opacity: 1,
@@ -32,7 +32,7 @@ export function AnimatedText({
     },
   };
 
-  const child = {
+  const child: Variants = {
     hidden: {
       opacity: 0,
       y: 20,

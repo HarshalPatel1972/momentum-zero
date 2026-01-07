@@ -3,7 +3,9 @@
  * Reusable animation configurations for consistent motion design
  */
 
-export const fadeInUp = {
+import type { Variants } from "framer-motion";
+
+export const fadeInUp: Variants = {
   hidden: {
     opacity: 0,
     y: 30,
@@ -18,7 +20,7 @@ export const fadeInUp = {
   },
 };
 
-export const fadeInDown = {
+export const fadeInDown: Variants = {
   hidden: {
     opacity: 0,
     y: -30,
@@ -33,7 +35,7 @@ export const fadeInDown = {
   },
 };
 
-export const fadeInLeft = {
+export const fadeInLeft: Variants = {
   hidden: {
     opacity: 0,
     x: -40,
@@ -48,7 +50,7 @@ export const fadeInLeft = {
   },
 };
 
-export const fadeInRight = {
+export const fadeInRight: Variants = {
   hidden: {
     opacity: 0,
     x: 40,
@@ -63,7 +65,7 @@ export const fadeInRight = {
   },
 };
 
-export const scaleIn = {
+export const scaleIn: Variants = {
   hidden: {
     opacity: 0,
     scale: 0.9,
@@ -78,7 +80,7 @@ export const scaleIn = {
   },
 };
 
-export const staggerContainer = {
+export const staggerContainer: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
@@ -89,7 +91,7 @@ export const staggerContainer = {
   },
 };
 
-export const staggerItem = {
+export const staggerItem: Variants = {
   hidden: {
     opacity: 0,
     y: 20,
