@@ -88,6 +88,9 @@ html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
 }
 
 body {
@@ -100,6 +103,9 @@ body {
   line-height: 1.6;
   min-height: 100vh;
   overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
+  position: relative;
 }
 
 /* Selection Styling */
@@ -557,5 +563,41 @@ h1, h2, h3, h4, h5, h6 {
   
   .glass-card:hover {
     transform: none;
+  }
+}
+
+/* ============================================
+   HORIZONTAL SCROLL FIX
+   ============================================ */
+
+/* Force all direct children to respect viewport */
+body > * {
+  max-width: 100%;
+}
+
+/* Ensure main and sections don't overflow */
+main {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: clip; /* Modern alternative to hidden */
+}
+
+main > section {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+/* Fix for absolute positioned elements */
+[class*="absolute"],
+[class*="fixed"] {
+  max-width: 100vw;
+}
+
+/* Prevent transform animations from causing overflow */
+@media (prefers-reduced-motion: no-preference) {
+  [style*="transform"] {
+    will-change: transform;
+    backface-visibility: hidden;
   }
 }
