@@ -108,18 +108,17 @@ export function Hero() {
           </div>
 
           {/* Right: Dashboard Mockup */}
+          {/* Right: Dashboard Mockup */}
           <motion.div
-            initial={{ opacity: 0, x: 50, rotateY: -15 }}
-            animate={{ opacity: 1, x: 0, rotateY: 0 }}
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
             className="relative hidden lg:block"
-            style={{ perspective: "1000px" }}
           >
             {/* Floating Dashboard */}
             <motion.div
               animate={{
                 y: [0, -15, 0],
-                rotateZ: [0, 1, 0],
               }}
               transition={{
                 duration: 6,
@@ -127,7 +126,6 @@ export function Hero() {
                 ease: "easeInOut",
               }}
               className="relative"
-              style={{ transformStyle: "preserve-3d" }}
             >
               {/* Main Dashboard Card */}
               <div className="relative bg-[rgba(26,26,46,0.8)] backdrop-blur-xl rounded-2xl border border-white/10 p-6 shadow-2xl">
