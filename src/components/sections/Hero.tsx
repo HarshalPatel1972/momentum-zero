@@ -48,13 +48,12 @@ export function Hero() {
                   delay={0.5}
                 />
                 {" "}
-                <GradientText animate className="inline">
-                  <AnimatedText
-                    text="AI Agents"
-                    variant="words"
-                    delay={0.6}
-                  />
-                </GradientText>
+                <AnimatedText
+                  text="AI Agents"
+                  variant="words"
+                  delay={0.6}
+                  className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-primary bg-[length:200%_auto] animate-gradient inline-flex"
+                />
               </span>
             </h1>
 
