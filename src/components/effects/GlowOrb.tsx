@@ -67,15 +67,14 @@ interface FloatingOrbsProps {
 }
 
 export function FloatingOrbs({ className, count = 5 }: FloatingOrbsProps) {
-  const orbs = Array.from({ length: count }, (_, i) => ({
-    id: i,
-    size: 200 + Math.random() * 300,
-    color: i % 2 === 0 ? "#0EA5E9" : "#8B5CF6",
-    initialX: Math.random() * 100,
-    initialY: Math.random() * 100,
-    duration: 20 + Math.random() * 20,
-    delay: Math.random() * -10,
-  }));
+  // Use deterministic values to prevent hydration mismatch
+  const orbs = [
+    { id: 0, size: 350, color: "#0EA5E9", initialX: 10, initialY: 20, duration: 25, delay: 0 },
+    { id: 1, size: 280, color: "#8B5CF6", initialX: 80, initialY: 60, duration: 30, delay: -3 },
+    { id: 2, size: 420, color: "#0EA5E9", initialX: 50, initialY: 80, duration: 35, delay: -5 },
+    { id: 3, size: 300, color: "#8B5CF6", initialX: 20, initialY: 50, duration: 28, delay: -2 },
+    { id: 4, size: 380, color: "#0EA5E9", initialX: 70, initialY: 30, duration: 32, delay: -7 },
+  ].slice(0, count);
 
   return (
     <div className={cn("absolute inset-0 overflow-hidden pointer-events-none", className)}>
