@@ -80,7 +80,7 @@ export function Features() {
             <motion.div
               key={feature.id}
               variants={staggerItem}
-              className={feature.size === "large" ? "lg:col-span-2" : ""}
+              className=""
             >
               <Card className="h-full group" hover3D={true} glowOnHover={true}>
                 <div className="flex flex-col h-full">

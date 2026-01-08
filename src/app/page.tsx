@@ -1,3 +1,5 @@
+"use client";
+
 import { Navigation } from "@/components/sections/Navigation";
 import { Hero } from "@/components/sections/Hero";
 import { Features } from "@/components/sections/Features";
@@ -10,14 +12,14 @@ export default function Home() {
   return (
     <>
       <Navigation />
-      <main className="relative w-full">
+      <main className="relative w-full overflow-x-clip">
         <Hero />
         <Features />
         <HowItWorks />
         <Architecture />
         <CTA />
-        <Footer />
       </main>
+      <Footer />
     </>
   );
 }

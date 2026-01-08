@@ -17,13 +17,12 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-white/40 text-sm">
-            © {currentYear} Momentum. All rights reserved.
+            Proudly Open Source. Built with Wails, Go, and React.
           </p>
 
           <div className="flex items-center gap-2 text-white/40 text-sm">
-            <span>Built with</span>
-            <span className="text-red-500">❤️</span>
-            <span>for developers</span>
+            <span>Created by</span>
+            <a href="https://github.com/HarshalPatel1972" target="_blank" rel="noreferrer" className="text-white hover:text-primary transition-colors">Harshal Patel</a>
           </div>
         </div>
       </div>

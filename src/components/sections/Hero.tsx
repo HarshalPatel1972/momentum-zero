@@ -29,13 +29,13 @@ export function Hero() {
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-6"
             >
               <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-              <span className="text-sm text-white/70">Now in Public Beta</span>
+              <span className="text-sm text-white/70">Open Source & Local First</span>
             </motion.div>
 
             {/* Headline */}
             <h1 className="heading-xl mb-6">
               <AnimatedText
-                text="Remote Control"
+                text="The Kill-Switch"
                 variant="words"
                 className="text-white block"
                 delay={0.3}
@@ -49,7 +49,7 @@ export function Hero() {
                 />
                 {" "}
                 <AnimatedText
-                  text="AI Agents"
+                  text="AI Agent"
                   variant="words"
                   delay={0.6}
                   className="text-primary inline-flex font-bold"
@@ -64,8 +64,8 @@ export function Hero() {
               transition={{ duration: 0.6, delay: 0.8 }}
               className="text-lg lg:text-xl text-white/60 max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed"
             >
-              Take full control of your autonomous AI agents from anywhere. 
-              Monitor, debug, and manage in real-time with enterprise-grade security.
+              A local-first bridge that lets you approve, deny, and monitor AI permissions from your phone. 
+              Built for the Model Context Protocol (MCP).
             </motion.p>
 
             {/* CTAs */}
@@ -75,35 +75,37 @@ export function Hero() {
               transition={{ duration: 0.6, delay: 1 }}
               className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
             >
-              <Button variant="primary" size="lg">
-                <span>Start Free Trial</span>
+              <Button variant="primary" size="lg" onClick={() => window.open('https://github.com/HarshalPatel1972/agent-momentum/releases', '_blank')}>
+                <span>Download v1.0</span>
                 <ArrowIcon />
               </Button>
-              <Button variant="secondary" size="lg">
-                <span>View Documentation</span>
+              <Button variant="secondary" size="lg" onClick={() => window.open('https://github.com/HarshalPatel1972/agent-momentum', '_blank')}>
+                <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/>
+                </svg>
+                <span>Star on GitHub</span>
               </Button>
             </motion.div>
 
-            {/* Stats */}
+            {/* Social Proof: Works With */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 1.2 }}
-              className="grid grid-cols-2 sm:grid-cols-4 gap-6 mt-12 pt-8 border-t border-white/10"
+              className="mt-12 pt-8 border-t border-white/10"
             >
-              {stats.map((stat, index) => (
-                <div key={stat.label} className="text-center lg:text-left">
-                  <motion.div
-                    initial={{ opacity: 0, scale: 0.5 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.4, delay: 1.4 + index * 0.1 }}
-                    className="text-2xl lg:text-3xl font-bold text-white mb-1"
-                  >
-                    {stat.value}
-                  </motion.div>
-                  <div className="text-sm text-white/50">{stat.label}</div>
+                <p className="text-sm text-white/40 mb-4 uppercase tracking-wider">Works with</p>
+                <div className="flex flex-wrap items-center justify-center lg:justify-start gap-6 text-white/60">
+                   <span className="hover:text-white transition-colors">VS Code</span>
+                   <span className="w-1 h-1 rounded-full bg-white/20"></span>
+                   <span className="hover:text-white transition-colors">Cursor</span>
+                   <span className="w-1 h-1 rounded-full bg-white/20"></span>
+                   <span className="hover:text-white transition-colors">Windsurf</span>
+                   <span className="w-1 h-1 rounded-full bg-white/20"></span>
+                   <span className="hover:text-white transition-colors">Claude Desktop</span>
+                   <span className="w-1 h-1 rounded-full bg-white/20"></span>
+                   <span className="hover:text-white transition-colors">Gemini</span>
                 </div>
-              ))}
             </motion.div>
           </div>
 

@@ -95,11 +95,11 @@ export function Navigation() {
 
             {/* CTA Buttons */}
             <div className="hidden lg:flex items-center gap-4">
-              <Button variant="ghost" size="sm">
+              <Button variant="ghost" size="sm" onClick={() => window.open('https://github.com/HarshalPatel1972/agent-momentum#readme', '_blank')}>
                 Documentation
               </Button>
-              <Button variant="primary" size="sm">
-                Get Started
+              <Button variant="primary" size="sm" onClick={() => window.open('https://github.com/HarshalPatel1972/agent-momentum/releases', '_blank')}>
+                Download
               </Button>
             </div>
 
