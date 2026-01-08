@@ -195,9 +195,9 @@ export function Architecture() {
 
           {/* Nodes */}
           <ArchitectureNode
-            label="Your Application"
-            sublabel="Web / Mobile / CLI"
-            x={20}
+            label="Local Machine"
+            sublabel="Desktop App"
+            x={50}
             y={50}
             delay={0.2}
             color="primary"
@@ -205,23 +205,13 @@ export function Architecture() {
           />
 
           <ArchitectureNode
-            label="Momentum Cloud"
-            sublabel="Secure Gateway"
-            x={50}
-            y={30}
+            label="Secure Tunnel"
+            sublabel="Ngrok / Sockets"
+            x={20}
+            y={50}
             delay={0.4}
             color="secondary"
-            icon="cloud"
-          />
-
-          <ArchitectureNode
-            label="Bridge Service"
-            sublabel="WebSocket Tunnel"
-            x={50}
-            y={70}
-            delay={0.5}
-            color="secondary"
-            icon="cloud"
+            icon="agent"
           />
 
           <ArchitectureNode
@@ -243,9 +233,8 @@ export function Architecture() {
             className="absolute bottom-6 left-6 flex flex-wrap gap-4"
           >
             {[
-              { color: "bg-primary", label: "Control Flow" },
-              { color: "bg-secondary", label: "Data Sync" },
-              { color: "bg-green-500", label: "Encrypted" },
+              { color: "bg-primary", label: "Local Control" },
+              { color: "bg-secondary", label: "Encrypted Tunnel" },
             ].map((item) => (
               <div key={item.label} className="flex items-center gap-2">
                 <div className={`w-3 h-3 rounded-full ${item.color}`} />
@@ -255,7 +244,7 @@ export function Architecture() {
           </motion.div>
         </div>
 
-        {/* Security Badges */}
+        {/* Technical Badges */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -265,9 +254,9 @@ export function Architecture() {
         >
           {[
             { icon: "🔐", label: "E2E Encrypted" },
-            { icon: "🛡️", label: "SOC 2 Type II" },
-            { icon: "🌍", label: "GDPR Compliant" },
-            { icon: "⚡", label: "99.9% Uptime SLA" },
+            { icon: "⚡", label: "Local-First" },
+            { icon: "🐧", label: "Linux / Mac / Win" },
+            { icon: "🔓", label: "Open Source" },
           ].map((badge) => (
             <motion.div
               key={badge.label}

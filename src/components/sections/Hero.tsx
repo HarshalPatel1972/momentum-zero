@@ -131,12 +131,29 @@ export function Hero() {
             >
               {/* Main Dashboard Card */}
               <div className="relative bg-[rgba(26,26,46,0.8)] backdrop-blur-xl rounded-2xl border border-white/10 p-6 shadow-2xl">
-                {/* Window Controls */}
-                <div className="flex items-center gap-2 mb-6">
-                  <div className="w-3 h-3 rounded-full bg-red-500/80" />
-                  <div className="w-3 h-3 rounded-full bg-yellow-500/80" />
-                  <div className="w-3 h-3 rounded-full bg-green-500/80" />
-                  <span className="ml-4 text-sm text-white/40">Momentum Dashboard</span>
+                {/* Window Controls (Windows Style) */}
+                <div className="flex items-center justify-between mb-6 border-b border-white/5 pb-3">
+                  <div className="flex items-center gap-3">
+                    <div className="w-5 h-5 rounded bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
+                       <svg className="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                       </svg>
+                    </div>
+                    <span className="text-sm text-white/60 font-medium">Momentum</span>
+                  </div>
+                  <div className="flex items-center gap-4">
+                    <div className="w-3 h-3 text-white/40 hover:text-white transition-colors cursor-pointer">
+                      <svg viewBox="0 0 10 1" fill="currentColor"><rect width="10" height="1"/></svg>
+                    </div>
+                    <div className="w-3 h-3 text-white/40 hover:text-white transition-colors cursor-pointer">
+                      <svg viewBox="0 0 10 10" stroke="currentColor" fill="none" strokeWidth="1"><rect width="10" height="10"/></svg>
+                    </div>
+                    <div className="w-3 h-3 text-white/40 hover:text-red-500 transition-colors cursor-pointer">
+                      <svg viewBox="0 0 10 10" fill="none" stroke="currentColor" strokeWidth="1.2">
+                        <path d="M1 1L9 9M9 1L1 9"/>
+                      </svg>
+                    </div>
+                  </div>
                 </div>
 
                 {/* Dashboard Content */}
